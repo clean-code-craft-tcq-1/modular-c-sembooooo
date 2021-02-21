@@ -29,3 +29,32 @@ The color coding needs to be printed as a reference manual for wiring personnel.
 This manual is a mapping from the color-names to the corresponding numbers.
 Add a function that would format the color coding in a form that someone can print.
 Also resolve any coding guideline violations.
+
+## My Assignment Details:(Work in progress)
+
+Divided it into the following units
+1. MajorColor
+2. MinorColor
+3. ColorPair
+4. ColorPairTest
+5. Telecomm_ColorCode
+
+### MajorColor
+This unit contains all the handling of MajorColor.
+
+### MinorColor
+This unit contains all the handling of Minor Color.
+
+### ColorPair
+This unit contains all the handling at color pair level.
+
+### ColorPairTest
+This unit contains the testcases for the color code implementation
+
+### Telecomm_ColorCode
+This unit contains the testcases and color code manual implementation
+
+
+
+
+

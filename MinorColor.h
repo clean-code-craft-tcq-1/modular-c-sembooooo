@@ -1,11 +1,11 @@
 #ifndef MINOR_COLOR_H_
 #define MINOR_COLOR_H_
 typedef enum {
-    BLUE,
-    ORANGE, 
-    GREEN, 
-    BROWN,
-    SLATE,
+    MinorColor_BLUE,
+    MinorColor_ORANGE, 
+    MinorColor_GREEN, 
+    MinorColor_BROWN,
+    MinorColor_SLATE,
     MinorColor_TotalNumber
     } MinorColor_t;
 

@@ -2,11 +2,11 @@
 #define MAJOR_COLOR_H_
 
 typedef enum {
-    WHITE ,
-    RED,
-    BLACK,
-    YELLOW,
-    VIOLET,
+    MajorColor_WHITE ,
+    MajorColor_RED,
+    MajorColor_BLACK,
+    MajorColor_YELLOW,
+    MajorColor_VIOLET,
     MajorColor_TotalNumber
     } MajorColor_t;
 

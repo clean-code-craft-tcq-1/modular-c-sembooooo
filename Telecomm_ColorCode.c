@@ -22,11 +22,11 @@ void PrintColorCodeManual(void)
 
 int main()
 {
-    EvaluateNumberToColorPair(4, WHITE, BROWN);
-    EvaluateNumberToColorPair(5, WHITE, SLATE);
+    EvaluateNumberToColorPair(4, MajorColor_WHITE, MinorColor_BROWN);
+    EvaluateNumberToColorPair(5, MajorColor_WHITE, MinorColor_SLATE);
 
-    EvaluateColorPairToNumber(BLACK, ORANGE, 12);
-    EvaluateColorPairToNumber(VIOLET, SLATE, 25);
+    EvaluateColorPairToNumber(MajorColor_BLACK, MinorColor_ORANGE, 12);
+    EvaluateColorPairToNumber(MajorColor_VIOLET, MinorColor_SLATE, 25);
     
     PrintColorCodeManual();
 

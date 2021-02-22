@@ -79,7 +79,7 @@ was a little ambigious. Contains code that evaluates the other code.
 Contains a function that prints the manual.
 So got into the amibiguity," So is it a manual printer or a testing code ? ".
 This unit contains the testcases and color code manual implementation.
-Any other implementation containing all units fall in this unit.
+Any other implementation at color code level fall in this unit. (for now)
 
 
 

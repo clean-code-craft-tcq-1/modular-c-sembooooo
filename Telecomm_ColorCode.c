@@ -1,18 +1,17 @@
-#include <stdio.h>
-#include "ColorPair.h"
-#include "ColorPairTest.h"
+#include <stdio.h>          /* For printf() */
+#include "ColorPairEvaluate.h"  /* For ColorPair.h and Evaluate.....() Interfaces */
 
 void PrintColorCodeManual(void)
 {
     int majorcolor, minorcolor;
     ColorPair colorpair;
     printf(" MAJORCOLOR    MINORCOLOR   PAIRNUMBER \n");
-    for(majorcolor =0; majorcolor < TotalNumberOfMajorColors ; majorcolor++)
+    for(majorcolor =0; majorcolor < MajorColor_TotalNumber ; majorcolor++)
     {
-        for(minorcolor =0; minorcolor < TotalNumberOfMinorColors ; minorcolor++)
+        for(minorcolor =0; minorcolor < MinorColor_TotalNumber ; minorcolor++)
         {
-            colorpair.majorColor = (MajorColor)majorcolor;
-            colorpair.minorColor = (MinorColor)minorcolor;
+            colorpair.majorColor = ((MajorColor_t)majorcolor);
+            colorpair.minorColor = ((MinorColor_t)minorcolor);
             printf(" %9s %13s %7d \n",
                     MajorColorToString(colorpair.majorColor),
                     MinorColorToString(colorpair.minorColor),
@@ -23,11 +22,11 @@ void PrintColorCodeManual(void)
 
 int main()
 {
-    testNumberToPair(4, WHITE, BROWN);
-    testNumberToPair(5, WHITE, SLATE);
+    EvaluateNumberToColorPair(4, WHITE, BROWN);
+    EvaluateNumberToColorPair(5, WHITE, SLATE);
 
-    testPairToNumber(BLACK, ORANGE, 12);
-    testPairToNumber(VIOLET, SLATE, 25);
+    EvaluateColorPairToNumber(BLACK, ORANGE, 12);
+    EvaluateColorPairToNumber(VIOLET, SLATE, 25);
     
     PrintColorCodeManual();
 

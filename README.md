@@ -31,6 +31,8 @@ Add a function that would format the color coding in a form that someone can pri
 Also resolve any coding guideline violations.
 
 ## My Assignment Details:(Work in progress)
+--Excuse me for my grammatical mistakes.
+Wanted to write this file to let my intention behind splitting into a readable format.
 
 Divided it into the following units
 1. MajorColor
@@ -41,18 +43,44 @@ Divided it into the following units
 
 ### MajorColor
 This unit contains all the handling of MajorColor.
+String array of MajorColor is moved into this unit
+and an interface is provided for other units. So its
+the unit responsibility to properly order the strings
+and enum in the same fashion.
+Added a macro which tells maximum number of characters
+in MajorColor. Updating this macro falls under this 
+units responsibility.
 
 ### MinorColor
 This unit contains all the handling of Minor Color.
+The reasoning is same as MajorColor Unit.
 
 ### ColorPair
 This unit contains all the handling at color pair level.
+Maximum Characters in a color pair Macro is now calculated
+with a macro from MajorColorunit , MinorColor unit and
+extra buffer length.
+So if there is any change in the length of major color and 
+minor color length. no need to change other modules.
+Didnt wanted to keep size as constant instead a configurable macro
+Wanted to place it in this unit as it is an colorpair level length
 
-### ColorPairTest
-This unit contains the testcases for the color code implementation
+### ColorPairEvaluate
+This was some confusing unit for me. As this only provides APIs for
+evaluation.
+Even though this is at colorpair level i wanted to have seperate unit
+for evaluation API. So if any more evaluation APIs are to come they
+will sit here.
+Renamed the APIs from test...() to Evaluate...() as it sounded nice.
 
 ### Telecomm_ColorCode
-This unit contains the testcases and color code manual implementation
+I did not find a good name for this unit as the purpose of this file
+was a little ambigious. Contains code that evaluates the other code.
+Contains a function that prints the manual.
+So got into the amibiguity," So is it a manual printer or a testing code ? ".
+This unit contains the testcases and color code manual implementation.
+Any other implementation containing all units fall in this unit.
+
 
 
 

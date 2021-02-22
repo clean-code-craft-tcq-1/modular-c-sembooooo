@@ -1,13 +1,19 @@
 #ifndef COLOR_PAIR_H_
 #define COLOR_PAIR_H_
 
-#include "MajorColor.h"
-#include "MinorColor.h"
+#include "MajorColor.h"  /*For Majorcolor_t, MAJORCOLORNAME_MAXCHARS ,MajorColorToString() */ 
+#include "MinorColor.h"  /*For Minorcolor_t, MINORCOLORNAME_MAXCHARS ,MinorColorToString() */   
 
 typedef struct {
-    MajorColor majorColor;
-    MinorColor minorColor;
+    MajorColor_t majorColor;
+    MinorColor_t minorColor;
 } ColorPair;
+
+
+#define COLORPAIRNAME_EXTRABUFFLEN      ((int)4)
+#define COLORPAIRNAME_MAXCHARS  \
+            (MAJORCOLORNAME_MAXCHARS + MINORCOLORNAME_MAXCHARS + COLORPAIRNAME_EXTRABUFFLEN)
+     
 
 extern void ColorPairToString(const ColorPair* colorPair, char* buffer);
 

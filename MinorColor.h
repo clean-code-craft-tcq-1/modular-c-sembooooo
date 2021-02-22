@@ -6,9 +6,11 @@ typedef enum {
     GREEN, 
     BROWN,
     SLATE,
-    TotalNumberOfMinorColors
-    } MinorColor;
+    MinorColor_TotalNumber
+    } MinorColor_t;
 
-extern const char * MinorColorToString(MinorColor minorcolor);
+#define MINORCOLORNAME_MAXCHARS     ((int)6)
+
+extern const char * MinorColorToString(MinorColor_t minorcolor);
 
 #endif  /*MINOR_COLOR_H_*/

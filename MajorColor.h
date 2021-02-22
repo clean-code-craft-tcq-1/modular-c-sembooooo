@@ -7,9 +7,10 @@ typedef enum {
     BLACK,
     YELLOW,
     VIOLET,
-    TotalNumberOfMajorColors
-    } MajorColor;
+    MajorColor_TotalNumber
+    } MajorColor_t;
 
-extern const char * MajorColorToString(MajorColor majorcolor );
+#define MAJORCOLORNAME_MAXCHARS     ((int)6)
+extern const char * MajorColorToString(MajorColor_t majorcolor );
 
 #endif  /*MAJOR_COLOR_H_*/

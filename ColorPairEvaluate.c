@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <assert.h>
-#include "ColorPairTest.h"
+#include "ColorPairEvaluate.h"
 
-const int kMaxColorPairNameChars = 16;
-
-void testNumberToPair(int pairNumber,MajorColor expectedMajor, MinorColor expectedMinor)
+void EvaluateNumberToColorPair(int pairNumber,MajorColor_t expectedMajor, MinorColor_t expectedMinor)
 {
     ColorPair colorPair;
-    char colorPairNames[kMaxColorPairNameChars];
+    char colorPairNames[COLORPAIRNAME_MAXCHARS];
 
     colorPair = GetColorFromPairNumber(pairNumber);
     ColorPairToString(&colorPair, colorPairNames);
@@ -17,7 +15,7 @@ void testNumberToPair(int pairNumber,MajorColor expectedMajor, MinorColor expect
     assert(colorPair.minorColor == expectedMinor);
 }
 
-void testPairToNumber( MajorColor major, MinorColor minor, int expectedPairNumber)
+void EvaluateColorPairToNumber( MajorColor_t major, MinorColor_t minor, int expectedPairNumber)
 {
     ColorPair colorPair;
     int pairNumber;

@@ -38,7 +38,7 @@ Divided it into the following units
 1. MajorColor
 2. MinorColor
 3. ColorPair
-4. ColorPairTest
+4. ColorPairEvaluate
 5. Telecomm_ColorCode
 
 ### MajorColor
